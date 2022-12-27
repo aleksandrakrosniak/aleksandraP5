@@ -4,7 +4,7 @@ var sketch1 = function(p) {
     p.colorBG = '#f1f1f1';
   
     p.preload = function() {
-      img = p.loadImage('./images/oplatwadodenim.jpg');
+      img = p.loadImage('https://i.imgur.com/fSgnUKW_d.webp');
     };
   
     p.setup = function() {
@@ -41,7 +41,7 @@ var sketch1 = function(p) {
     p.colorBG = '#f1f1f1';
   
     p.preload = function() {
-      img = p.loadImage('./images/denimroots.jpg');
+      img = p.loadImage('https://i.imgur.com/fSgnUKW_d.webp');
     };
   
     p.setup = function() {
@@ -72,6 +72,7 @@ var sketch1 = function(p) {
     }
   };
   
-
+ 
+  
   new p5(sketch1, 'sketch1-container');
   new p5(sketch2, 'sketch2-container');
