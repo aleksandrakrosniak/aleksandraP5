@@ -1,37 +1,77 @@
-let img, 
-colorFG = '#111111',
-colorBG = '#f1f1f1';
+var sketch1 = function(p) {
+    let img;
+    p.colorFG = '#FF0000';
+    p.colorBG = '#f1f1f1';
+  
+    p.preload = function() {
+      img = p.loadImage('/images/oplatwadodenim.jpg');
+    };
+  
+    p.setup = function() {
+      p.createCanvas(600, 600);
+      p.background(p.colorBG);
+      img.resize(600, 600);
+    };
+  
+    p.draw = function() {
+      p.background(p.colorBG);
+      p.fill(p.colorFG);
+      p.noStroke();
+      p.ratio = 600 / 600;
+      p.coefZ = (p.mouseX / p.width) * 400;
+      p.tilesX = p.map(p.coefZ, 0, 600, 10, 100);
+      p.tilesY = p.ratio * p.tilesX;
+      p.tileSize = p.width / p.tilesX;
+      for (p.y = 0; p.y < img.height; p.y += p.tileSize) {
+        for (p.x = 0; p.x < img.width; p.x += p.tileSize) {
+          p.c = img.get(p.x, p.y);
+          p.b = p.map(p.brightness(p.c), 0, 255, 1, 0);
+          p.push();
+          p.translate(p.x, p.y);
+          p.rect(0, 0, p.b * p.tileSize, p.b * p.tileSize);
+          p.pop();
+        }
+      }
+    }
+  };
+  
+  var sketch2 = function(p) {
+    let img;
+    p.colorFG = '#111111';
+    p.colorBG = '#f1f1f1';
+  
+    p.preload = function() {
+      img = p.loadImage('/images/denimroots.jpg');
+    };
+  
+    p.setup = function() {
+      p.createCanvas(600, 600);
+      p.background(p.colorBG);
+      img.resize(600, 600);
+    };
+  
+    p.draw = function() {
+      p.background(p.colorBG);
+      p.fill(p.colorFG);
+      p.noStroke();
+      p.ratio = 600 / 600;
+      p.coefZ = (p.mouseX / p.width) * 400;
+      p.tilesX = p.map(p.coefZ, 0, 600, 10, 100);
+      p.tilesY = p.ratio * p.tilesX;
+      p.tileSize = p.width / p.tilesX;
+      for (p.y = 0; p.y < img.height; p.y += p.tileSize) {
+        for (p.x = 0; p.x < img.width; p.x += p.tileSize) {
+          p.c = img.get(p.x, p.y);
+          p.b = p.map(p.brightness(p.c), 0, 255, 1, 0);
+          p.push();
+          p.translate(p.x, p.y);
+          p.rect(0, 0, p.b * p.tileSize, p.b * p.tileSize);
+          p.pop();
+        }
+      }
+    }
+  };
+  
 
-function preload(){
-img = loadImage('https://piotrkrosniak.github.io/aleksandraP5/images/oplatwadodenim.jpg'); 			  			//add an image
-}
-
-function setup() {
-createCanvas(600, 600).parent('sketch-container');
-background(colorBG);
-img.resize(600, 600);
-}
-
-
-function draw() {
-background(colorBG);
-fill(colorFG);
-noStroke();
-const ratio = 600/600;
-let coefZ = (mouseX/width)*400;
-console.log(coefZ)
-console.log(mouseX)
-const tilesX = map(coefZ, 0, 600, 10, 100);
-const tilesY = ratio * tilesX;
-const tileSize = width / tilesX;
-for (let y = 0; y < img.height; y += tileSize) {
-for (let x = 0; x < img.width; x += tileSize) {
-  let c = img.get(x, y);
-  let b = map(brightness(c), 0, 255, 1, 0);
-  push();
-  translate(x, y);
-  rect(0, 0, b * tileSize, b * tileSize);
-  pop();
-}
-}
-}
+  new p5(sketch1, 'sketch1-container');
+  new p5(sketch2, 'sketch2-container');
