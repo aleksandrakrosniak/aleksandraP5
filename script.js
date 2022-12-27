@@ -4,7 +4,7 @@ var sketch1 = function(p) {
     p.colorBG = '#f1f1f1';
   
     p.preload = function() {
-      img = p.loadImage('https://i.imgur.com/fSgnUKW_d.webp');
+      img = p.loadImage('./images/denimroots.jpg');
     };
   
     p.setup = function() {
@@ -41,7 +41,7 @@ var sketch1 = function(p) {
     p.colorBG = '#f1f1f1';
   
     p.preload = function() {
-      img = p.loadImage('https://i.imgur.com/fSgnUKW_d.webp');
+      img = p.loadImage('./images/oplatwadodenim.jpg');
     };
   
     p.setup = function() {
