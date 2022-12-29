@@ -9,7 +9,6 @@ var sketch1 = function(p) {
 
   p.setup = function() {
     p.createCanvas(p.displayWidth/2, p.displayWidth/2);
-    print(p.displayWidth);
     p.background(p.colorBG);
     img.resize(p.displayWidth/2, p.displayWidth/2);
   };
