@@ -8,7 +8,7 @@ var sketch1 = function(p) {
   };
 
   p.setup = function() {
-    p.createCanvas(600, 600);
+    p.createCanvas(p.displayWidth/2, 600);
     p.background(p.colorBG);
     img.resize(600, 600);
   };
@@ -47,7 +47,7 @@ var sketch2 = function(p) {
   };
 
   p.setup = function() {
-    p.createCanvas(600, 600);
+    p.createCanvas(p.displayWidth/2, 600);
     p.background(p.colorBG);
     img.resize(600, 600);
   };
