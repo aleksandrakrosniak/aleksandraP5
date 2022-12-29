@@ -1,6 +1,6 @@
 var sketch1 = function(p) {
     let img;
-    p.colorFG = '#FF0000';
+    p.colorFG = '#111111';
     p.colorBG = '#f1f1f1';
   
     p.preload = function() {
