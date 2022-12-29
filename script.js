@@ -18,9 +18,9 @@ var sketch1 = function(p) {
       p.fill(p.colorFG);
       p.noStroke();
       p.ratio = 1000 / 1000;
-      p.coefZ = 2900;//initial value of pixelization 
+      p.coefZ = 4900;//initial value of pixelization 
       if (p.mouseX > 0 && p.mouseX < p.width && p.mouseY > 0 && p.mouseY< p.height) 
-      {p.coefZ = (p.mouseX / p.width) * 2900;}
+      {p.coefZ = (p.mouseX / p.width) * 4900;}
       p.tilesX = p.map(p.coefZ, 0, 1000, 1, 100);
       p.tilesY = p.ratio * p.tilesX;
       p.tileSize = p.width / p.tilesX;
@@ -57,9 +57,9 @@ var sketch1 = function(p) {
       p.fill(p.colorFG);
       p.noStroke();
       p.ratio = 1000 / 1000;
-      p.coefZ = 2900;
+      p.coefZ = 4900;
       if (p.mouseX > 0 && p.mouseX < p.width && p.mouseY > 0 && p.mouseY< p.height) 
-      {p.coefZ = (p.mouseX / p.width) * 2900;}
+      {p.coefZ = (p.mouseX / p.width) * 4900;}
       p.tilesX = p.map(p.coefZ, 0, 1000, 10, 100);
       p.tilesY = p.ratio * p.tilesX;
       p.tileSize = p.width / p.tilesX;
