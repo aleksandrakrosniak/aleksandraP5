@@ -4,7 +4,7 @@ var sketch1 = function(p) {
     p.colorBG = '#f1f1f1';
   
     p.preload = function() {
-      img = p.loadImage('./images/denimroots.jpg');
+      img = p.loadImage('./images/oplatwadodenim.jpg');
     };
   
     p.setup = function() {
@@ -21,7 +21,7 @@ var sketch1 = function(p) {
       p.coefZ = 900;
       if (p.mouseX > 0 && p.mouseX < p.width && p.mouseY > 0 && p.mouseY< p.height) 
       {p.coefZ = (p.mouseX / p.width) * 900;}
-      p.tilesX = p.map(p.coefZ, 0, 600, 10, 100);
+      p.tilesX = p.map(p.coefZ, 0, 600, 60, 100);
       p.tilesY = p.ratio * p.tilesX;
       p.tileSize = p.width / p.tilesX;
       for (p.y = 0; p.y < img.height; p.y += p.tileSize) {
@@ -43,7 +43,7 @@ var sketch1 = function(p) {
     p.colorBG = '#f1f1f1';
   
     p.preload = function() {
-      img = p.loadImage('./images/oplatwadodenim.jpg');
+      img = p.loadImage('./images/denimroots.jpg');
     };
   
     p.setup = function() {
@@ -60,7 +60,7 @@ var sketch1 = function(p) {
       p.coefZ = 900;
       if (p.mouseX > 0 && p.mouseX < p.width && p.mouseY > 0 && p.mouseY< p.height) 
       {p.coefZ = (p.mouseX / p.width) * 900;}
-      p.tilesX = p.map(p.coefZ, 0, 600, 10, 100);
+      p.tilesX = p.map(p.coefZ, 0, 600, 60, 100);
       p.tilesY = p.ratio * p.tilesX;
       p.tileSize = p.width / p.tilesX;
       for (p.y = 0; p.y < img.height; p.y += p.tileSize) {
