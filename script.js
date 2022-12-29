@@ -8,9 +8,10 @@ var sketch1 = function(p) {
     };
   
     p.setup = function() {
-      p.createCanvas(1000, 1000);
+      p.pixelDensity(1)
+      p.createCanvas(p.displayWidth/2, p.displayHeight/2);
       p.background(p.colorBG);
-      img.resize(1000, 1000);
+      img.resize(p.displayWidth/2, p.displayHeight/2);
     };
   
     p.draw = function() {
@@ -47,9 +48,10 @@ var sketch1 = function(p) {
     };
   
     p.setup = function() {
-      p.createCanvas(1000, 1000);
+      p.pixelDensity(1)
+      p.createCanvas(p.displayWidth/2, p.displayHeight/2);
       p.background(p.colorBG);
-      img.resize(1000, 1000);
+      img.resize(p.displayWidth/2, p.displayHeight/2);
     };
   
     p.draw = function() {
