@@ -23,7 +23,7 @@
   /* Create four equal columns that sits next to each other */
   .column {
     -ms-flex: 25%; /* IE10 */
-    flex: 40%;
+    flex: 50%;
     max-width: 50%;
     padding: 0 0px;
   }
@@ -38,7 +38,7 @@
   @media screen and (max-width: 1600px) {
     .column {
       -ms-flex: 50%;
-      flex: 40%;
+      flex: 50%;
       max-width: 50%;
     }
   }
