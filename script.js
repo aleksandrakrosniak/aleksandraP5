@@ -94,11 +94,11 @@ var sketch3 = function(p) {
     p.background(p.colorBG);
     p.fill(p.colorFG);
     p.noStroke();
-    p.ratio = 900 / 600;
-    p.coefZ = 1900;
+    p.ratio = 600 / 300;
+    p.coefZ = 900;
     if (p.mouseX > 0 && p.mouseX < p.width && p.mouseY > 0 && p.mouseY< p.height) 
-    {p.coefZ = (p.mouseX / p.width) * 1900;}
-    p.tilesX = p.map(p.coefZ, 0, 1600, 10, 1000);
+    {p.coefZ = (p.mouseX / p.width) * 900;}
+    p.tilesX = p.map(p.coefZ, 0, 600, 10, 100);
     p.tilesY = p.ratio * p.tilesX;
     p.tileSize = p.width / p.tilesX;
     for (p.y = 0; p.y < img.height; p.y += p.tileSize) {
