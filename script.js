@@ -8,9 +8,9 @@ var sketch1 = function(p) {
   };
 
   p.setup = function() {
-    p.createCanvas(p.displayWidth/2, p.displayWidth/2);
+    p.createCanvas(p.displayWidth/0.2, p.displayWidth/0,2);
     p.background(p.colorBG);
-    img.resize(p.displayWidth/2, p.displayWidth/2);
+    img.resize(p.displayWidth/0.22, p.displayWidth/0,2);
   };
 
   p.draw = function() {
@@ -21,7 +21,7 @@ var sketch1 = function(p) {
     p.coefZ = 1900;//initial value of pixelization 
     if (p.mouseX > 0 && p.mouseX < p.width && p.mouseY > 0 && p.mouseY< p.height) 
     {p.coefZ = (p.mouseX / p.width) * 900;}
-    p.tilesX = p.map(p.coefZ, 0, 600, 1, 100);
+    p.tilesX = p.map(p.coefZ, 0, 400, 1, 100);
     p.tilesY = p.ratio * p.tilesX;
     p.tileSize = p.width / p.tilesX;
     for (p.y = 0; p.y < img.height; p.y += p.tileSize) {
@@ -47,9 +47,9 @@ var sketch2 = function(p) {
   };
 
   p.setup = function() {
-    p.createCanvas(p.displayWidth/2, p.displayWidth/2);
+    p.createCanvas(p.displayWidth/0.2, p.displayWidth/0,2);
     p.background(p.colorBG);
-    img.resize(p.displayWidth/2, p.displayWidth/2);
+    img.resize(p.displayWidth/0.2, p.displayWidth/0,2);
   };
 
   p.draw = function() {
