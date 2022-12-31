@@ -98,7 +98,7 @@ var sketch2 = function(p) {
     p.coefZ = 900;
     if (p.mouseX > 0 && p.mouseX < p.width && p.mouseY > 0 && p.mouseY< p.height) 
     {p.coefZ = (p.mouseX / p.width) * 900;}
-    p.tilesX = p.map(p.coefZ, 0, 900, 10, 100);
+    p.tilesX = p.map(p.coefZ, 0, 600, 10, 100);
     p.tilesY = p.ratio * p.tilesX;
     p.tileSize = p.width / p.tilesX;
     for (p.y = 0; p.y < img.height; p.y += p.tileSize) {
