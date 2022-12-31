@@ -75,12 +75,6 @@ var sketch2 = function(p) {
     }
   }
 };
-
-
-
-new p5(sketch1, 'sketch1-container');
-new p5(sketch2, 'sketch2-container');
-
 var sketch2 = function(p) {
   let img;
   p.colorFG = '#111111';
@@ -91,9 +85,9 @@ var sketch2 = function(p) {
   };
 
   p.setup = function() {
-    p.createCanvas(p.displayWidth/1.5, p.displayWidth/0.5);
+    p.createCanvas(p.displayWidth/1, p.displayWidth/0.5);
     p.background(p.colorBG);
-    img.resize(p.displayWidth/2, p.displayWidth/2);
+    img.resize(p.displayWidth/1, p.displayWidth/0.5);
   };
 
   p.draw = function() {
@@ -119,4 +113,9 @@ var sketch2 = function(p) {
     }
   }
 };
+
+
+
+new p5(sketch1, 'sketch1-container');
+new p5(sketch2, 'sketch2-container');
 new p5(sketch2, 'sketch3-container');
