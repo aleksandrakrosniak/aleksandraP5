@@ -85,9 +85,9 @@ var sketch3 = function(p) {
   };
 
   p.setup = function() {
-    p.createCanvas(p.displayWidth, p.displayWidth);
+    .createCanvas(p.displayWidth/2, p.displayWidth/2);
     p.background(p.colorBG);
-    img.resize(p.displayWidth/, p.displayWidth/);
+    img.resize(p.displayWidth/2, p.displayWidth/2);
   };
 
   p.draw = function() {
