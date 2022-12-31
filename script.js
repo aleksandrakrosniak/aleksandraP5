@@ -75,7 +75,7 @@ var sketch2 = function(p) {
     }
   }
 };
-var sketch2 = function(p) {
+var sketch3 = function(p) {
   let img;
   p.colorFG = '#111111';
   p.colorBG = '#f1f1f1';
@@ -85,16 +85,16 @@ var sketch2 = function(p) {
   };
 
   p.setup = function() {
-    p.createCanvas(p.displayWidth/1, p.displayWidth/0.5);
+    p.createCanvas(p.displayWidth, p.displayWidth);
     p.background(p.colorBG);
-    img.resize(p.displayWidth/1, p.displayWidth/0.5);
+    img.resize(p.displayWidth/, p.displayWidth/);
   };
 
   p.draw = function() {
     p.background(p.colorBG);
     p.fill(p.colorFG);
     p.noStroke();
-    p.ratio = 600 / 600;
+    p.ratio = 600 / 900;
     p.coefZ = 900;
     if (p.mouseX > 0 && p.mouseX < p.width && p.mouseY > 0 && p.mouseY< p.height) 
     {p.coefZ = (p.mouseX / p.width) * 900;}
@@ -118,4 +118,4 @@ var sketch2 = function(p) {
 
 new p5(sketch1, 'sketch1-container');
 new p5(sketch2, 'sketch2-container');
-new p5(sketch2, 'sketch3-container');
+new p5(sketch3, 'sketch3-container');
