@@ -75,6 +75,12 @@ var sketch2 = function(p) {
     }
   }
 };
+
+
+
+new p5(sketch1, 'sketch1-container');
+new p5(sketch2, 'sketch2-container');
+
 var sketch2 = function(p) {
   let img;
   p.colorFG = '#111111';
@@ -113,9 +119,4 @@ var sketch2 = function(p) {
     }
   }
 };
-
-
-
-new p5(sketch1, 'sketch1-container');
-new p5(sketch2, 'sketch2-container');
 new p5(sketch2, 'sketch3-container');
