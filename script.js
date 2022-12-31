@@ -85,9 +85,9 @@ var sketch3 = function(p) {
   };
 
   p.setup = function() {
-    p.createCanvas(p.displayWidth, p.displayWidth);
+    p.createCanvas(p.displayWidth/0.3, p.displayWidth/0.3);
     p.background(p.colorBG);
-    img.resize(p.displayWidth, p.displayWidth);
+    img.resize(p.displayWidth/0.3, p.displayWidth/0.3);
   };
 
   p.draw = function() {
@@ -97,8 +97,8 @@ var sketch3 = function(p) {
     p.ratio = 900 / 600;
     p.coefZ = 1900;
     if (p.mouseX > 0 && p.mouseX < p.width && p.mouseY > 0 && p.mouseY< p.height) 
-    {p.coefZ = (p.mouseX / p.width) * 900;}
-    p.tilesX = p.map(p.coefZ, 0, 600, 10, 100);
+    {p.coefZ = (p.mouseX / p.width) * 1900;}
+    p.tilesX = p.map(p.coefZ, 0, 1600, 10, 1000);
     p.tilesY = p.ratio * p.tilesX;
     p.tileSize = p.width / p.tilesX;
     for (p.y = 0; p.y < img.height; p.y += p.tileSize) {
